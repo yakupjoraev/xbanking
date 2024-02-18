@@ -1,0 +1,117 @@
+.accordion {
+  column-count: 2;
+
+  row-gap: 20px;
+  column-gap: 20px;
+
+  @media (max-width: $breakpoint992) {
+    column-count: 1;
+  }
+}
+
+.accordion__item {
+  // flex: 0 1 calc(50% - 20px);
+  display: grid;
+  border-radius: 20px;
+  background-color: #151515;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.accordion__item.active .accordion__header::after {
+  opacity: 0;
+}
+
+.accordion__item.active .accordion__header {
+  padding-bottom: 20px;
+
+  &::before {
+    border-color: var(--base-white) transparent transparent transparent;
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding-bottom: 10px;
+  }
+}
+
+.accordion__header {
+  position: relative;
+  padding: 24px 40px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--base-white);
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-radius: 8px;
+    border-color: var(--main-yellow) transparent transparent transparent;
+    transition: transform 0.2s linear, border 0.2s linear;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 24px 40px 24px 24px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 20px 24px 20px 10px;
+    font-size: 16px;
+
+    &::before {
+      right: 4px;
+      top: 26px;
+    }
+  }
+}
+
+.accordion__content {
+  max-height: 0;
+  padding: 0 40px 0 40px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--base-white);
+  transition: max-height 0.2s ease, padding 0.2s ease;
+
+  & a {
+    color: var(--base-white);
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 0 40px 0 24px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 0 20px 0 10px;
+    font-size: 13px;
+  }
+}
+
+.accordion__item.active .accordion__header {}
+
+.accordion__item.active .accordion__content {
+  padding: 0 40px 32px 40px;
+  max-height: 1000px;
+
+  @media (max-width: $breakpoint992) {
+    padding: 0 40px 20px 24px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 0 20px 20px 10px;
+  }
+}
