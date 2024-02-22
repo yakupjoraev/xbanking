@@ -198,6 +198,15 @@
     padding-bottom: 40px;
     border-radius: 20px;
     background-color: #0e0e0e;
+
+    @media (hover:hover) {
+      &:hover {
+        .community__bug-icon {
+          transform: translateY(-10px);
+        }
+      }
+    }
+
   }
 
   // .community__bug-icon
@@ -205,6 +214,7 @@
   &__bug-icon {
     margin-top: -100px;
     margin-bottom: -24px;
+    transition: transform 0.2s linear;
 
     @media (max-width: $breakpoint768) {
       width: 160px;

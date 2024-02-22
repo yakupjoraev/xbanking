@@ -54,6 +54,10 @@
   }
 }
 
+.section-title--left {
+  text-align: left;
+}
+
 .section-text {
   font-weight: 400;
   font-size: 20px;
@@ -63,5 +67,9 @@
 
   @media (max-width: $breakpoint768) {
     font-size: 18px;
+
+    br {
+      display: none;
+    }
   }
 }

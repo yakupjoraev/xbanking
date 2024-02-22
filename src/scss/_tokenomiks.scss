@@ -1,0 +1,311 @@
+.tokenomiks {
+
+  // .tokenomiks__inner
+
+  &__inner {
+    position: relative;
+  }
+
+  // .tokenomiks__blocks
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: calc(100% - 500px);
+
+    @media (max-width: $breakpoint1450) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: calc(100% - 400px);
+    }
+
+    @media (max-width: $breakpoint992) {
+      max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .tokenomiks__block
+
+  &__block {
+    display: grid;
+    row-gap: 16px;
+
+    &:nth-child(1) {
+      padding: 0 24px 24px 0;
+      border-right: 1px solid #161616;
+      border-bottom: 1px solid #161616;
+
+      @media (max-width: $breakpoint1450) {
+        padding: 0 16px 16px 0;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid #161616;
+      }
+    }
+
+    &:nth-child(2) {
+      padding: 0 24px 24px;
+      border-right: 1px solid #161616;
+      border-bottom: 1px solid #161616;
+
+      @media (max-width: $breakpoint1450) {
+        padding: 0 16px 16px;
+        border-right: 0;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid #161616;
+      }
+    }
+
+    &:nth-child(3) {
+      padding: 0 0 24px 24px;
+      border-bottom: 1px solid #161616;
+
+      @media (max-width: $breakpoint1450) {
+        padding: 16px 16px 16px 0;
+        border-right: 1px solid #161616;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid #161616;
+      }
+    }
+
+    &:nth-child(4) {
+      padding: 24px 24px 0 0;
+      border-right: 1px solid #161616;
+
+      @media (max-width: $breakpoint1450) {
+        padding: 16px 0 16px 16px;
+        border-right: 0;
+        border-bottom: 1px solid #161616;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid #161616;
+      }
+    }
+
+    &:nth-child(5) {
+      padding: 24px 24px 0 24px;
+      border-right: 1px solid #161616;
+
+      @media (max-width: $breakpoint1450) {
+        padding: 16px 16px 16px 0;
+        border-right: 1px solid #161616;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid #161616;
+      }
+    }
+
+    &:nth-child(6) {
+      padding: 24px 0 0 24px;
+
+      @media (max-width: $breakpoint1450) {
+        padding: 16px 0 16px 16px;
+        border-right: 0;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid #161616;
+      }
+    }
+  }
+
+
+
+  // .tokenomiks__block-header
+
+  &__block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint1450) {
+      column-gap: 16px;
+    }
+
+  }
+
+  // .tokenomiks__block-label
+
+  &__block-label {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 140%;
+    color: var(--base-white);
+
+    @media (max-width: $breakpoint1450) {
+      font-size: 20px;
+    }
+
+  }
+
+  // .tokenomiks__block-percent
+
+  &__block-percent {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 140%;
+    text-align: right;
+
+    @media (max-width: $breakpoint1450) {
+      font-size: 20px;
+    }
+
+  }
+
+  // .tokenomiks__block-footer
+
+  &__block-footer {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--base-white);
+  }
+
+  // .tokenomiks__block--presale
+
+  &__block--presale {
+
+    .tokenomiks__block-percent {
+      color: var(--main-yellow);
+    }
+  }
+
+  // .tokenomiks__block--marketing
+
+  &__block--marketing {
+
+    .tokenomiks__block-percent {
+      color: #534600;
+    }
+  }
+
+  // .tokenomiks__block--liquidity
+
+  &__block--liquidity {
+
+    .tokenomiks__block-percent {
+      color: #2f2f2f;
+    }
+  }
+
+  // .tokenomiks__block--staking-rewards
+
+  &__block--staking-rewards {
+
+    .tokenomiks__block-percent {
+      color: #555;
+    }
+  }
+
+  // .tokenomiks__block--exchange-listings
+
+  &__block--exchange-listings {
+
+    .tokenomiks__block-percent {
+      color: #3a3a3a;
+    }
+  }
+
+  // .tokenomiks__block--founding-team
+
+  &__block--founding-team {
+
+    .tokenomiks__block-percent {
+      color: #595959;
+    }
+  }
+
+  // .tokenomiks__diagramm
+
+  &__diagramm {
+    position: absolute;
+    right: 0;
+    top: -100px;
+
+    img {
+      max-width: 500px;
+      height: auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      background: rgba(255, 221, 46, 0.4);
+      filter: blur(205px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      background: rgba(255, 221, 46, 0.4);
+      filter: blur(100px);
+    }
+
+    @media (max-width: $breakpoint1450) {
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      position: relative;
+      text-align: center;
+      transform: translateY(0);
+    }
+
+    @media (max-width: $breakpoint768) {
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      &::after {
+        width: 50%;
+        height: 50%;
+      }
+
+      &::before {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+}

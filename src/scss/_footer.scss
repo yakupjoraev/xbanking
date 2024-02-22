@@ -107,10 +107,11 @@
 
   &__socials {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: fit-content;
     margin-left: auto;
     column-gap: 24px;
+    row-gap: 24px;
 
     @media (max-width: $breakpoint992) {
       margin: 0;
@@ -139,7 +140,9 @@
   // .footer__social--trustpilot
 
   &__social--trustpilot {
-    grid-column: span 3;
+    grid-column: span 4;
+    justify-items: center;
+    justify-self: center;
   }
 
   // .footer__copy
