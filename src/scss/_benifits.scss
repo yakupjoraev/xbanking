@@ -146,9 +146,12 @@
   &__link {
     display: inline-flex;
 
-    &:hover {
-      filter: brightness(0) saturate(100%) invert(83%) sepia(96%) saturate(1134%) hue-rotate(328deg) brightness(103%) contrast(100%);
-    }
+    // @media (hover:hover) {
+    //   &:hover {
+    //     filter: brightness(0) saturate(100%) invert(83%) sepia(96%) saturate(1134%) hue-rotate(328deg) brightness(103%) contrast(100%);
+    //   }
+    // }
+
   }
 
   // .benifits__pictures

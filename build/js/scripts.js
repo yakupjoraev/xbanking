@@ -54,6 +54,24 @@ function fixedNav() {
 window.addEventListener('scroll', fixedNav)
 
 
+//плавный скролл
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href').substr(1)
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+};
+
+
+
 // Аккордеон
 const accordionItems = document.querySelectorAll('[data-accordion-item]');
 let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон

@@ -11,7 +11,6 @@
     grid-template-columns: repeat(5, 1fr);
     column-gap: 22px;
     row-gap: 22px;
-    margin-bottom: 50px;
 
     @media (max-width: $breakpoint1450) {
       grid-template-columns: repeat(3, 1fr);
@@ -136,6 +135,7 @@
     align-items: center;
     column-gap: 65px;
     row-gap: 40px;
+    margin-top: 50px;
     padding-top: 100px;
 
     @media (max-width: $breakpoint992) {
