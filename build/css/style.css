@@ -964,6 +964,11 @@ body.locked {
   display: inline-flex;
 }
 
+.benifits__link:hover {
+  -webkit-filter: brightness(0) saturate(100%) invert(83%) sepia(96%) saturate(1134%) hue-rotate(328deg) brightness(103%) contrast(100%);
+          filter: brightness(0) saturate(100%) invert(83%) sepia(96%) saturate(1134%) hue-rotate(328deg) brightness(103%) contrast(100%);
+}
+
 .benifits__pictures {
   position: relative;
   z-index: 2;
@@ -1710,6 +1715,7 @@ body.locked {
 }
 
 .footer__link {
+  white-space: nowrap;
   font-size: 15px;
   line-height: 120%;
   color: var(--base-gray);

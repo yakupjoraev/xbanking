@@ -86,6 +86,7 @@
   // .footer__link
 
   &__link {
+    white-space: nowrap;
     font-size: 15px;
     line-height: 120%;
     color: var(--base-gray);
