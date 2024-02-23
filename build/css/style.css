@@ -1778,6 +1778,16 @@ body.locked {
   }
 }
 
+@media (max-width: 1600px) {
+  .start::before {
+    height: 180px;
+  }
+
+  .start {
+    min-height: 960px;
+  }
+}
+
 @media (max-width: 1449.98px) {
   .section {
     margin: 140px 0;
@@ -1789,14 +1799,6 @@ body.locked {
 
   .section-title {
     font-size: 48px;
-  }
-
-  .start::before {
-    height: 180px;
-  }
-
-  .start {
-    min-height: 960px;
   }
 
   .start__title {
