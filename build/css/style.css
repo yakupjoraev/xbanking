@@ -1791,8 +1791,12 @@ body.locked {
     font-size: 48px;
   }
 
+  .start::before {
+    height: 180px;
+  }
+
   .start {
-    min-height: 1100px;
+    min-height: 960px;
   }
 
   .start__title {
@@ -1942,7 +1946,7 @@ body.locked {
   }
 
   .start {
-    min-height: 1000px;
+    min-height: 860px;
   }
 
   .start__ethereum {
@@ -1968,7 +1972,7 @@ body.locked {
 
   .start::before {
     height: 100px;
-    top: 96%;
+    top: 90%;
   }
 
   .start {

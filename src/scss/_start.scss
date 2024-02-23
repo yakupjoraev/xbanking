@@ -18,6 +18,9 @@
     filter: blur(50px);
     background: linear-gradient(90deg, #0d0b0a 0%, #06060a 29.31%, #08070b 47.4%, #08070c 60.7%, #07070d 100%);
 
+    @media (max-width: $breakpoint1450) {
+      height: 180px;
+    }
 
     @media (max-width: 1200px) {
       height: 150px;
@@ -25,7 +28,7 @@
 
     @media (max-width: $breakpoint992) {
       height: 100px;
-      top: 96%;
+      top: 90%;
     }
 
     @media (max-width: $breakpoint768) {
@@ -50,12 +53,12 @@
 
 
   @media (max-width: $breakpoint1450) {
-    min-height: 1100px;
+    min-height: 960px;
   }
 
 
   @media (max-width: 1200px) {
-    min-height: 1000px;
+    min-height: 860px;
   }
 
   @media (max-width: $breakpoint992) {
