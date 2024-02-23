@@ -17,6 +17,8 @@
     height: 250px;
     filter: blur(50px);
     background: linear-gradient(90deg, #0d0b0a 0%, #06060a 29.31%, #08070b 47.4%, #08070c 60.7%, #07070d 100%);
+    user-select: none;
+    pointer-events: none;
 
     @media (max-width: 1600px) {
       height: 180px;
@@ -49,6 +51,8 @@
     // background-repeat: no-repeat;
     // background-size: contain;
     z-index: -1;
+    user-select: none;
+    pointer-events: none;
   }
 
 
@@ -91,6 +95,8 @@
       background-image: url('../img/start/circle-left.svg');
       background-repeat: no-repeat;
       background-size: cover;
+      user-select: none;
+      pointer-events: none;
     }
 
 
@@ -104,6 +110,8 @@
       background-image: url('../img/start/circle-top.svg');
       background-repeat: no-repeat;
       background-size: cover;
+      user-select: none;
+      pointer-events: none;
 
       @media (max-width: $breakpoint992) {
         top: 3%;
