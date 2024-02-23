@@ -89,4 +89,35 @@ function toggleAccordion() {
 
 accordionItems.forEach(item => item.addEventListener('click', toggleAccordion));
 
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll('.tabs');
+
+  tabs.forEach(tab => {
+    const tabButtons = tab.querySelectorAll('.tabs__aside-item');
+    const tabContents = tab.querySelectorAll('.tabs__content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabName = button.dataset.tabBtn;
+        activateTab(tabName);
+      });
+    });
+
+    function activateTab(tabName) {
+      tabButtons.forEach(button => {
+        button.classList.remove('active');
+      });
+      tabContents.forEach(tabContent => {
+        tabContent.classList.remove('active');
+      });
+
+      const activeButton = tab.querySelector(`.tabs__aside-item[data-tab-btn="${tabName}"]`);
+      const activeTabContent = tab.querySelector(`.tabs__content[data-tab-content="${tabName}"]`);
+
+      activeButton.classList.add('active');
+      activeTabContent.classList.add('active');
+    }
+  });
+
+});
 

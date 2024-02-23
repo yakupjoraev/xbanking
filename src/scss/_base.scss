@@ -33,6 +33,7 @@
   }
 }
 
+
 .section-title {
   font-family: var(--second-family);
   font-weight: 600;
@@ -71,5 +72,15 @@
     br {
       display: none;
     }
+  }
+}
+
+
+
+.section-head--left {
+
+  .section-title,
+  .section-text {
+    text-align: left;
   }
 }
